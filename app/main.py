@@ -2,7 +2,8 @@ class Person:
 
     people = {}
 
-    def __init__(self, name: str, age: int):
+
+    def __init__(self, name: str, age: int) -> None:
         self.name = name
         self.age = age
         Person.people[name] = self
@@ -10,7 +11,9 @@ class Person:
 
 
 def create_person_list(people: list) -> list:
+
     result = []
+
     for dict_people in people:
 
         result.append(Person(dict_people["name"], dict_people["age"]))
